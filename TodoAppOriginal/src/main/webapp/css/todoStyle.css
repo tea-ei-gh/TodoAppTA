@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css?family=Kosugi');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  width: 100%;
+  font-size: 27px;
+  text-align: center;
+  background-color: #0000FF;
+  color: #fff;
+  padding: 30px 0;
+}
+
+h3{
+	text-align: center;
+}
+
+body{
+	width: 80%;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+form{
+	text-align: center;
+}
+
+p{
+	text-align: center;
+}
+
+div.a{ 
+	text-align: right;
+}
+
+main {
+  max-width: 20rem;
+  padding: 2rem;
+  margin: auto;
+}
+
+.tarea{
+    display: inline-block;
+    width: 30%;
+    padding: 10px;
+    border: 1px solid #999;
+    box-sizing: border-box;
+    background: #f2f2f2;
+    margin: 0.5em 0;
+    line-height: 2.0;
+    height: 3em;
+    
+    white-space: pre;
+}
+
+input{
+  padding:8px 15px;
+  border-radius:10px;
+  transition:.3s ease;
+  color:#000;
+  
+ &[type=text]{
+    width:calc(100% - 30px);
+    margin-bottom:30px;
+    border:2px solid #868283;
+    &:placeholder-shown{
+      border:2px solid #EAE4DA;
+    }
+    &::placeholder{
+      color:#A3A5AA;
+    }
+    &[half]{
+      width:calc(50% - 30px);
+      float:left;
+      margin-right:30px;
+    }
+  }
+}
+
+#focus{
+  border:3px solid #fef6fb;
+  box-shadow:0 0 10px 0 #D09B52;
+  position:absolute;
+  transition:
+    width .2s ease, 
+    height .2s ease, 
+    left .2s ease, 
+    top .2s ease, 
+    border-radius .2s ease;
+  pointer-events:none;
+  z-index:5;
+  border-radius:10px;
+  display:none;
+}
+
+.btn{
+	color: #fff;
+  	background-color: #3366CC;
+  	border-bottom: 5px solid #000080;
+  	
+  	-webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+  	box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+  	
+  	border-radius: 120vh;
+}
+.btn:hover {
+  margin-top: 3px;
+  color: #fff;
+  background: #3333CC;
+  border-bottom: 2px solid #3333CC;
+}
+
+a{
+  text-decoration: none;
+
+  position: relative;
+  display: inline-block;
+  transition: .3s;
+  
+  font-family: 'Kosugi', sans-serif;
+}
+a::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: #31aae2;
+  transition: .3s;
+  transform: translateX(-50%);
+}
+
+a:hover::after{
+  width: 100%;
+}
+
+a,a:visited{
+    color: #0071d1;
+}
